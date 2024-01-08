@@ -1,5 +1,5 @@
 -- codice prodotto descrizione prezzo unitario quantità --
-
+-- create database prodotti;
 create table prodotto (
     codice_prodotto char(5) primary key,
     descrizione     VARCHAR(50) ,
