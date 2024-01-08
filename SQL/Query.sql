@@ -16,6 +16,6 @@ Insert into prodotto(codice_prodotto , descrizione , prezzo_unitario , quantita)
 ('SW23A' , 'gomma' , 0.50 , 200),
 ('MN65F' , 'pennello' , 2.50 , 70),
 ('245DS' , 'pastelli' , 11.50 , 60),
-('YT3DS' , 'tempere' , 10.50 , 120)
-('JG54S' , 'post-it' , 1.50 , 20)
-('RU53D' , 'libro' , 10.50 , 120)
+('YT3DS' , 'tempere' , 10.50 , 120),
+('JG54S' , 'post-it' , 1.50 , 20),
+('RU53D' , 'libro' , 10.50 , 120);
