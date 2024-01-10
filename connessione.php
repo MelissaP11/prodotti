@@ -10,11 +10,12 @@
     $dbname = "prodotti";
     //connessione al server sql con selezione del database
     $conn = mysqli_connect($hostname , $username , $password , $dbname);
-    if(!$conn)
+    if(!$conn){
         die("<br><br><strong>Errore nella connessione</strong>");
-    else
+    }else {
         print "<br><br><strong>Connessione avvenuta corretamente</strong><br><br>";
-    mysqli_close($conn);
+    }
+        mysqli_close($conn);
     print "<strong>Ora la connessione è chiusa</strong>";
 ?>
 </p>
