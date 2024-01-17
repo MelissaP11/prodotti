@@ -1,7 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+    <style>
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: #333;
+            }
+            
+            li {
+              float: left;
+            }
+            
+            li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            
+            li a:hover:not(.active) {
+              background-color: #0499aa;
+            }
+            
+            .active {
+              background-color: #0499aa;
+            }
+            </style>
+    </head>
 <body>
+<ul>
+            <li><a href="http://localhost/prodotti/elenco.php">Tabella prodotti</a></li>
+            <li><a href="http://localhost/prodotti/codice_prodotto.html">Inserimento codice prodotto</a></li>
+            <li><a href="http://localhost/prodotti/inserisci_prodotto.html"> Inserimento nuovo prodotto</a></li>  
+          </ul>
 <h1 style="font-size: 3; ">Elenco prodotti</h1>
 <?php
     $hostname="localhost";
@@ -22,7 +57,7 @@
     }
     $riga = mysqli_fetch_array($risultato);
     if($riga){
-        print "<table border= '1'>";
+        print "<table border= '2'>";
         print "<tr><td> Codice </td><td> Descrizione</td><td>Prezzo unitario</td><td>Quantita</td></tr>";
         while($riga){
             print"<tr><td>".$riga['codice_prodotto']."</td>";

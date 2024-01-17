@@ -1,8 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+    <style>
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: #333;
+            }
+            
+            li {
+              float: left;
+            }
+            
+            li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            
+            li a:hover:not(.active) {
+              background-color: #0499aa;
+            }
+            
+            .active {
+              background-color: #0499aa;
+            }
+            </style>     
+    </head>
 <body>
 <h1 style="font-size: 3; ">Elenco prodotti</h1>
+<p>Visione del codice inserito</p>
+<ul>
+            <li><a href="http://localhost/prodotti/elenco.php">Tabella prodotti</a></li>
+            <li><a href="http://localhost/prodotti/codice_prodotto.html">Inserimento codice prodotto</a></li>
+            <li><a href="http://localhost/prodotti/inserisci_prodotto.html"> Inserimento nuovo prodotto</a></li>  
+          </ul>
 <?php
     $hostname="localhost";
     $username ="root";
