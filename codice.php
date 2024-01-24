@@ -45,6 +45,17 @@
     <li><a href="http://localhost/prodotti/inserisci_prodotto.html"> Inserimento nuovo prodotto</a></li>  
 </ul>
 <br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
 <h1 style="font-size: 3; ">Elenco prodotti</h1>
 <p>Visione del codice inserito</p>
 
