@@ -53,6 +53,31 @@
 <p>Visione del codice inserito</p>
 
 <?php
+$user=$_COOKIE['user'];
+$password=$_COOKIE['password'];
+if($user == " || $password == "){
+  print "campi vuoti";
+  print "<br><a href='http://localhost/autenticazione/accedi.html'>Ritorna all'accedi</a>";
+
+} else {
+$query ="Select * from utenti where username='$user' && password='$password'";
+$risultato = mysqli_query($conn,$query);
+if(!$risultato){
+  print "errore nel comando";
+  exit();
+}}
+
+
+
+
+
+
+
+
+
+
+
+
     $hostname="localhost";
     $username ="root";
     $password = "";

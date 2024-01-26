@@ -62,7 +62,7 @@
       
            if($user == " || $password == "){
                 print "campi vuoti";
-                print "<br><a href='http://localhost/autenticazione/accedi.html'>Ritorna all'accedi</a>";
+                print "<br><a href='http://localhost/prodotti/accedi.html'>Ritorna all'accedi</a>";
 
            } else 
            {
@@ -77,8 +77,8 @@
                 print "Benvenuto"." ". $riga['Nome']." ".$riga['Cognome'];
             }else{
                 print "username o password errate";
-                print "<br><a href='http://localhost/autenticazione/registrazione.html'>Registrati</a>";
-                print "<br><a href='http://localhost/autenticazione/accedi.html'>Accedi</a>";
+                print "<br><a href='http://localhost/prodotti/registrazione.html'>Registrati</a>";
+                print "<br><a href='http://localhost/prodotti/accedi.html'>Accedi</a>";
             }
 
            }
