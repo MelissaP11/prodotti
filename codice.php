@@ -49,15 +49,6 @@
 <br><br><br><br>
 
 
-
-
-
-
-
-
-
-
-
 <h1 style="font-size: 3; ">Elenco prodotti</h1>
 <p>Visione del codice inserito</p>
 

@@ -14,10 +14,17 @@
                exit();
            }
            session_start();
-           $user=$_COOKIE['user'];
-           $nome=$_COOKIE['nome'];
-           $cognome=$_COOKIE['cognome'];
-           $password=$_COOKIE['password'];
+           $user=$_POST['user'];
+           $nome=$_POST['nome'];
+           $cognome=$_POST['cognome'];
+           $password=$_POST['password'];
+
+
+        setcookie("user",$user,time()+120);
+        setcookie("nome",$nome,time()+120);
+        setcookie("cognome",$cognome,time()+120);
+        setcookie("password",$password,time()+120);
+
 
            $query= "insert into utenti(username , nome , cognome , password ) VALUES
            ('$user' , '$nome' , '$cognome' , '$password')";
