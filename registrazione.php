@@ -14,10 +14,10 @@
                exit();
            }
            session_start();
-           $user=$_POST['user'];
-           $nome=$_POST['nome'];
-           $cognome=$_POST['cognome'];
-           $password=$_POST['password'];
+           $user=$_COOKIE['user'];
+           $nome=$_COOKIE['nome'];
+           $cognome=$_COOKIE['cognome'];
+           $password=$_COOKIE['password'];
 
            $query= "insert into utenti(username , nome , cognome , password ) VALUES
            ('$user' , '$nome' , '$cognome' , '$password')";

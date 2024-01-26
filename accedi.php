@@ -16,7 +16,7 @@
             }
             
             li {
-              float: right;
+              float: left;
             }
             
             li a {
@@ -38,8 +38,8 @@
     </head>
     <body>
             <ul>
-                <li><a href="http://localhost/autenticazione/registrazione.html">Registrati</a></li>
-                <li><a href="http://localhost/autenticazione/accedi.html">Accedi</a></li>
+                <li><a href="http://localhost/prodotti/registrazione.html">Registrati</a></li>
+                <li><a href="http://localhost/prodotti/accedi.html">Accedi</a></li>
               </ul>
             <br><br><br><br>
         <?php 
@@ -56,6 +56,10 @@
            session_start();
            $user=$_POST['user'];
            $password=$_POST['password'];
+
+           setcookie("user",$user,time()+60);
+           setcookie("password",$password ,time()+60);
+      
            if($user == " || $password == "){
                 print "campi vuoti";
                 print "<br><a href='http://localhost/autenticazione/accedi.html'>Ritorna all'accedi</a>";
