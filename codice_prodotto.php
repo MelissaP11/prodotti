@@ -37,14 +37,29 @@
             </style>
     </head>
     <body>
+    <br><br>
       <ul>
         <li><a href="http://localhost/prodotti/homepage.html">Homepage</a></li>
         <li><a href="http://localhost/prodotti/elenco.php">Tabella prodotti</a></li>
-        <li><a href="http://localhost/prodotti/codice_prodotto.html">Inserimento codice prodotto</a></li>
+        <li><a href="http://localhost/prodotti/codice_prodotto.php">Inserimento codice prodotto</a></li>
         <li><a href="http://localhost/prodotti/inserisci_prodotto.html"> Inserimento nuovo prodotto</a></li> 
         <li><a href="http://localhost/prodotti/accedi.html">Accedi</a></li>
         <li><a href="http://localhost/prodotti/registrazione.html">Registrati</a></li>
       </ul>
+      <br><br>
+      <?php
+  
+      if(!isset($_COOKIE['user'])) {
+        print "Prima devi autenticarti";
+        print "<br><a href='http://localhost/prodotti/accedi.html'>Autenticazione</a>";
+      } else {
+        
+        
+      
+
+      ?>
+
+    
           <br><br>
         <p style="font-size: 5 ">Ricerca prodotto<br><br>
         <form method='post' action='codice.php'>
@@ -54,5 +69,6 @@
         <input type='reset' value='Annulla'>
         </form>
         </p>
+      <?php } ?>
     </body>
     </html>

@@ -46,7 +46,7 @@
            $hostname="localhost";
            $username ="root";
            $password = "";
-           $dbname = "utenti";
+           $dbname = "prodotti";
            
            $conn = mysqli_connect($hostname , $username , $password , $dbname);
            if(!$conn){
@@ -57,9 +57,7 @@
            $user=$_POST['user'];
            $password=$_POST['password'];
 
-           setcookie("user",$user,time()+60);
-           setcookie("password",$password ,time()+60);
-      
+          
            if($user == " || $password == "){
                 print "campi vuoti";
                 print "<br><a href='http://localhost/prodotti/accedi.html'>Ritorna all'accedi</a>";
@@ -69,12 +67,15 @@
             $query ="Select * from utenti where username='$user' && password='$password'";
             $risultato = mysqli_query($conn,$query);
             if(!$risultato){
-                print "errore nel comando";
+                print "errore nella query sql";
                 exit();
             }
             $riga = mysqli_fetch_array($risultato);
             if($riga){
                 print "Benvenuto"." ". $riga['Nome']." ".$riga['Cognome'];
+
+                setcookie("user",$user,time()+60);
+               
             }else{
                 print "username o password errate";
                 print "<br><a href='http://localhost/prodotti/registrazione.html'>Registrati</a>";
